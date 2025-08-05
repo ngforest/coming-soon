@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0);
+      animation: fadeInUp 1.2s cubic-bezier(.77, 0, .175, 1) both;
+      /* blur */
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+      animation: fadeIn 1.5s cubic-bezier(.77, 0, .175, 1) both;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: #e0e0e0;
+      animation: fadeIn 2s cubic-bezier(.77, 0, .175, 1) both;
+    }
+
+    .illustration {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 2rem auto;
+      animation: float 3s ease-in-out infinite;
+      /* filter: drop-shadow(0 4px 24px rgba(255, 255, 255, 0.1)); */
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-16px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .illustration {
+        max-width: 220px;
+      }
+    }
+
+    .web-link,
+    a.web-link {
+      color: #fff;
+      user-select: none;
+      text-decoration: none;
+      opacity: 0.3;
+      font-size: 1rem;
+      transition: opacity 0.2s;
+    }
+
+    a.web-link:hover {
+      /* opacity: 1; */
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+
+<body id="your-element-selector">
+  <div class="container">
+    <img class="illustration" src="./coming-soon.gif" alt="Coming Soon Illustration">
+    <p>We’re working on something amazing.<br>Stay tuned for the big reveal.</p>
+  </div>
+  <footer style="margin:2rem; text-align:center;">
+    <div class="web-link">
+      Made with ♥️ by
+      <a href="https://ngforest.com" target="_blank" rel="noopener" style='color: #fff;'>
+        ngforest.com</a>
+  </footer>
+  <script>
+    VANTA.DOTS({
+      el: "#your-element-selector",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      showLines: false,
+      backgroundColor: 0x000000,
+      color: 0xffffff,
+      color2: 0x000000,
+    })
+  </script>
+</body>
+
+</html>
